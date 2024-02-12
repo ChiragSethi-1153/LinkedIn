@@ -1,6 +1,6 @@
 const { Posts } = require("../models/posts")
 
-exports.posts = async(req) => {
+exports.createPosts = async(req) => {
     const {id} = req.params;
     const { title, body} = req.body
 
@@ -19,7 +19,7 @@ exports.posts = async(req) => {
     }
 } 
 
-exports.post = async (req) => {
+exports.getPost = async (req) => {
 
     const {id} = req.params 
     try{
@@ -33,7 +33,7 @@ exports.post = async (req) => {
 
 }
 
-exports.postUpdate = async (req) => {
+exports.updatePost = async (req) => {
     const {id} = req.params
     const { body, title } = req.body;
     // console.log(req.body)
